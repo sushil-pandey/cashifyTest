@@ -3,43 +3,30 @@ import logo from './logo.svg';
 import './App.css';
 import BackGroundImage from './resources/bgImage.png';
 import Home from './components/Home'
-import {BrowserRouter as Router,  Link } from "react-router-dom";
+import { BrowserRouter as Router, Link } from "react-router-dom";
 import Routes from './Routes'
 
 function App() {
   return (
-    <div className="App" style={{backgroundImage: `url(${BackGroundImage})`,flex: 1, height: '100%',position: 'fixed',
-top: 0,
-width:'100%',
-backgroundSize: 'cover',}} >
+    <div className="App" style={{
+       flex: 1, height: '100%', position: 'fixed',
+      top: 0,
+      width: '100%',
+      backgroundSize: 'cover',
+    }} >
 
 
 
-<Router>
-      <nav className="navbar ">
-        <div >
-          <ul className="navbar" style={{flexDirection: 'row'}}>
-
-            <li >
-              <Link to="/" className="nav-link">Home</Link>
-            </li>
-            <li>
-              <Link to="/menu" className="nav-link">Menu</Link>
-            </li>
-            <li>
-              <Link to="/gallery" className="nav-link">Gallery</Link>
-            </li>
-            <li>
-              <Link to="/testimonial" className="nav-link">Testimonial</Link>
-            </li>
-            <li>
-              <Link to="/contactUs" className="nav-link">ContactUs</Link>
-            </li>
-          </ul>
+      <Router>
+        <div class="topnav" id="myTopnav">
+        <Link to="/contactUs" className="topnav1">ContactUs</Link>
+        <Link to="/testimonial" className="topnav1">Testimonial</Link>
+        <Link to="/gallery" className="topnav1">Gallery</Link>
+        <Link to="/menu" className="topnav1">Menu</Link>
+        <Link to="/" className="topnav1">Home</Link>
         </div>
-      </nav>
 
-      <Routes />
+        <Routes />
       </Router>
       {/* <Home /> */}
     </div>
